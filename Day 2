@@ -1,0 +1,154 @@
+Video 8
+Familiarising with the ubuntu desktop.
+We treated how to add guest mode to ubuntu desktop, why we need the linux terminal
+1. because of connectivity.
+The tilder represents the home folder and the dollar sign represents a regular user and not a super user in the system.
+To see the home we use $ pwd command (present working directory)
+and to see the folders in home we use $ ls (list directory content)
+
+To create a file we use the command touch
+
+To read the content in a particular file we use the command cat
+
+To make a shortcut we use the tab key on the keyboard
+
+We used the command clear to clear everything, or control L.
+
+Then we used the command tail to show the last part of our file
+
+Then we also used the command head which shows us the first part of the file.
+
+
+Video 9
+We used the command which ( It locates a command)
+
+Letter q on the keyboard takes you out of a command
+
+How to know which command does?
+We can use the command info with a command. Eg, info which
+
+The command man which is manual does similar thing to info
+
+We used the command cd (This automatically checks for a folder with the command, it is also used to navigate through folders)
+
+The command mkdir to create a folder Eg, mkdir Devops_Folder
+
+To create a folder inside a folder we do, mkdir Devops_Folder/inside_folder
+
+To repeat the command you used lastly you will press the keyboards up arrow.
+
+I used the cd - (cd with the hypen) command
+
+.................................
+
+Video 10
+Flags
+flags are ways to extend the functionality of the command we are running
+To tell the command how I want it to work
+To give a command an idea of the expected returned data eg, ls -l(This will give a listed info format)
+
+The command ls - a is used to check hidden files
+
+The command ls -la shows more info about the files and hidden files as well.
+
+rmdir is used to remove a directory in a directory
+
+rm -r command is used to remove a whole directory
+
+rm command is used to remove a file
+
+Video 11
+
+cp command(used to copy a file) eg, Devops Desktop/
+
+mv command(used to move a file and to rename a file)Devops Desktop Renaming: Desktop/Devops Desktop/Learning_linux
+
+echo
+
+Video 12
+
+echo 
+
+Variable
+
+Video 13
+
+Directory tree structure in linux
+Another flag 
+mkdir -p to create multiple folders at a time
+
+sudo command is used to install a software sudo apt-get install tree
+
+-L flag is used to signify level
+
+bin folder contains binary files and these can't be read as text
+
+cntrl R brings up the last commands you wrote just type few letters
+
+All the binary files are stored in usr/bin
+
+Few other commands are stored in the usr/bin Eg, ls bin or ls usr/bin
+
+Video 14
+Linux directories
+
+Boot stores data related to booting up system
+
+CD-rom , we have the mount point
+
+-dev is the location of device files, a device file is an interface to a device driver
+
+etc is where configuration files are kept.
+
+home is where users keep specific files and folders
+
+Video 15
+Linux directories
+
+lib libraries are collections of resources used by the computer, they are used by the os kernel. 
+
+lost+found this is often used for system recovery
+
+media
+
+mnt(mount)
+
+opt this is optional or option, it means adding custom functions, this would be in the opt directory
+
+proc this is known as process, the processess the system starts
+
+grep commqnd is used to filter and find something
+
+root
+
+Video 16
+The run directory
+This is the mountpoint for tempfs filesystem in the computers memory. Temporary data used by processes are kept there. 
+
+df command disk free
+df -h a mofre readable format
+
+free command this is used to check the ram memory
+
+free -h
+
+ls /run/*.pid making an exception
+
+id command gives information aboutr a logged in user
+
+Video 17
+
+sbin s=system anything related to the system the system binaries are stored here.
+snap where you have done anything related to snap
+
+srv some service some server, this is where service files are kept which means FTP files
+
+sys system, the kernel makes use of this directory
+
+tmp this is where tmp files and directories are kept on disk
+
+usr this is where programs and libraries are been stored 
+
+var this is part ofthe sub directories within the root directory of the linux os which the system uses to write data during the course of its operation
+it stores data that gets changed in the course of the operation of the OS
+
