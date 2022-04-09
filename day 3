@@ -1,0 +1,102 @@
+Video 18
+less command code is used to view a particular file in another screen, the cat command shows the file in the present window
+wget this is used to get a link from the internet
+
+curl command transfers data to or from a network server
+vim this is a text editor, I used :set number to video the line numbers, i to insert a text, :wq to write and quit
+
+grep command is used to search for a string of characters in a specified file.
+
+diff command shows the differences between 2 files
+
+useradd command is used to add a new user to our system eg sudo useradd dayo
+sudo su or sudo -s
+passwd command is used to add a password to a user
+
+control R for reverse i search 
+
+Video 19
+inode entries
+Metadata is data about data which means extra information or full details about a file
+inode they store metadata about a file
+File tables are file names and inode number
+stat command code shows details about a file.
+
+chmod 777 command which means change modification is used to change permissions, who has access to a file
+
+ln command is used to link 2 files together
+
+ls -i
+
+df -i 
+
+Video 20
+File descriptions and redirections
+File descriptors are needed to track every file on the system, and it points to the file table and the file table points to the inodes.
+
+Redirection is redirecting a code inside a file and not to display on the screen. Eg, echo hello >somefile
+cat somefile, this displays hello.
+Let's say we want to add another sentence into the somefile we use echo I am learning devops >>somefile
+
+File descriptors are
+ standard input and these are data that you input into the system from your keyboard it is represented by 0 stdin
+
+standard out which is the number 1 is the data stream that prints onto the screen stdout
+
+standard error which is the number 2 stderr
+they are represented by numbers
+
+Find command find / -name daniel.io
+find / -name daniel.io > stdout.txt
+less stdout.txt
+
+find / -name daniel.io 2> errors.txt
+What we did here is a redirection which is we are using the standard error 2 to redirect errors into stdout.txt
+
+vim error.txt &
+We are about to read the process of the vim
+
+ps which means process status ps -ef | grep 4677
+I passed the process of 4677 using a | grep to filter out unwanted information
+
+Then to check the libraries the process vim is using we use the command lsof
+lsof | grep 4677
+
+Video 21
+User groups and permissions
+sudo super user do
+su command is used to switch user Eg, sudo su
+su peter
+exit to exit the user and another exit
+
+to add a user to a group we use the command groupadd, Eg,
+sudo groupadd jundev - This is to create the group
+sudo grep jundev /etc/group - This is to check the group
+sudo usermod -a -G jundev peter - This is to add the user and modify it to the group
+userdel is to delete user
+
+-rwxrwxrwx - This represents a file, this is also the permissions
+drwxrwxr - This represents a directory
+
+Video 22
+chmod - Change mode
+chmod u+x or w or r permissions_demo - This is to add permissions for users
+chmod u-x or w or r permissions_demo - This is to remove permissions for users
+chmod g+x or w or r permissions_demo - This is to add permissions for group
+chmod o+x or w or r permissions_demo - This is to add permissions for others
+
+permissions can be of
+read -4
+write 2
+execute -1
+no permission -0
+
+Permissions can be a combination of 
+Read + write + Execute - 7
+Read + Write - 6
+Read + Execute - 5
+Write + Execute - 3
+
+So instead of writing permissions 1 by 1 you can combine them.
+
+ 
