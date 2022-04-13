@@ -1,0 +1,103 @@
+Video 23
+Chown command is used to change ownership eg sudo chown fabian:daniel Devops
+
+gpasswd command is user to manage groups eg, sudo gpasswd -d fabian snrdev
+
+gpasswd -h is used to check for other gpasswd flags
+
+passwd this is used to give a user password
+
+shadow directory stores encrypted password.
+
+-G flag is used to append a group to any other group it belongs to
+
+Video 24
+Achiving and commpression
+archiving is storing files in one folder 
+Compression of files in storing files in a folder but with less disk space
+
+du command which means disk usage is used to check the size of a file eg du -h doc
+du -h doc*(all doc files)
+
+tar command is an archiving command which uses extensions like -cvf
+c is for create
+v means verbose which means print
+f is for file
+eg tar -cvf archived.tar doc*
+
+tar.tvf archived.tar, this is to show us the content inside the archived file
+
+bz2 command is for compression eg bz2 archived.tar
+
+bunzip2 command is used to uncompress a file
+
+tar -xvf command is used to extract files in a tar file
+x for extract
+v for verbose
+f for file
+eg, tar -xvf archived.tar
+
+gz command is another compression command
+
+gunzip command is used to uncompress a gz file eg, gunzip archived.tar
+
+zip command is yet another compression command, eg, zip archived.tar.zip archived.tar
+
+unzip command is used to uncompress a file.
+
+ls -l
+
+How to compress a file with a password
+
+rm archive*
+
+tar -cvzf archived.tar.gz doc* this is create a tar file and zip it at the same time.
+
+tar -xvzf command is used to extract a zip file
+
+Video 25
+How to install software
+Libraries and modules, libraries are pieces of code that has been collected together and can be resued for a program.
+Modules extend the functionality of an operating system eg modules
+
+Package or software.
+A package is a collection of files, archived or compressed files that helps in the installation of a software.
+
+Dependencies
+These are libraries or packages that are required before a software can be successfully installed.
+
+Package manager or system, this is a tool that helps with the intsllation of software
+
+Command line utilities, 
+
+Respositories is a centralized location where all softwares to be installed are found
+
+Compiling a software
+
+Binaries are compiled version of the code
+
+Script is  text file that contains commands in which when executed it is able to perform commands as written.
+
+File extension
+
+Video 26
+Install a software on linux
+computingforgeeks.com/how-to-install-mongodb-database-on-ubuntu
+
+$ wget -q0 - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
+
+echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list
+
+sudo apt update
+
+sudo apt install mongodb-org
+
+sudo systemctl stop mongod
+
+sudo systemctl start mongod
+
+systemctl status mongod
+
+Video 27
+About package manager
+Snap can be used to package your software, snap automatically updates software, you get to run the latest software.
