@@ -100,4 +100,4 @@ systemctl status mongod
 
 Video 27
 About package manager
-Snap can be used to package your software, snap automatically updates software, you get to run the latest software.
+Snap can be used to package your software, snap automatically updates software, it also runs the latest software.
