@@ -1,0 +1,118 @@
+Video 27
+About package manager
+Snap can be used to package your software, snap automatically updates software, you get to run the latest software.
+
+Vidde 28
+SSH
+Client Server can be two computers and both can either be a comouter or the computer itself and one of them sends a request and the other processes the request
+eg, browser and website
+
+Network Protocol is an established set of rules that determines how data is transmitted bewtween different devices. 
+Eg, TCP Ip, HTTP, FTP
+Algorithm are set of rules or a process which needs to be followed to solve a specific problem commonly used in calcultions
+Packet is the actual data that is been fragmented. And the unit of the data is considered as packet.
+Payload is the actualdata within the packet.
+Remote server, this is any computer that is not physically attached to your computer.
+
+SSH- This means secure shell. It is a cryptographic network protocol which means a standard set of rules that is being used to transfer encoded packets over the network.
+It uses asymmetric cipher for encryption and decryption of packets.
+Asymmetric cipher uses a key pair, which is the public and private keys.
+There are several types of encryption algorithms
+RSA
+DSA
+ED25519
+SSh uses asymmetric cipher to establish connectivity between client and server.
+To send encrypted data across the channel.
+What the server does is, once it receives a connection request from the client, it uses the public key that it has to encrypt a data.
+Disadvantages of SSH
+Any misconfiguration of SSH can affect you from ever being able to login to the system.
+If your private key gets lost.
+
+Video 29
+OpenSSh server
+I created 2 sever machines client and remote. I opened another adapter in the network section in the settings.
+it was changed to bridged network so as to have unique IP adresss. 
+Then I move over to connecting the remote network to the client network
+We first check where our ssh files are kept, ls -latr /home/dan/.ssh
+Every user has their .ssh
+
+Then we generate keypair 
+ssh-keygen
+You will be asked for a passphrase, which is a password. But it can be left blank.
+
+Then we run the ssh server on the remote server
+It might not be installed so we do
+sudo apt install openssh-server -y
+Then we need to copy the public key over to the remote host, to transfer it. We use
+
+ssh-copy-id -i /home/dan/.ssh/id_rsa.pub daniel@remote ipaddress
+In other for this to work you have to get the ip address of your remote host. 
+To do that, you will go to your remote host, then type. 
+
+ifconfig
+
+I had some complications getting the ip address so i had to go to my server settings in my VM dashboard then i chose network and changed the adapter to bridged network.
+You can now go to your remote host and type ifconfig again
+You will see something like enp0s3 there you will get your ip address from inet.
+ Now you can connect to your remote host from your client host using this 
+ssh-copy-id -i /home/dan/.ssh/id_rsa.pub daniel@remote ipaddress.
+
+Video 30 
+Sudoers
+sudo useradd -m danny
+
+We can make a user have administrative command by using
+sudo vi /etc/sudoers
+To be sure your file was saved we use sudo visudo -c
+
+We can remove the user and add it to a group, 
+dd - This removes a line.
+
+We can add the member to a group to have priviledges
+sudo vi /etc/sudoers
+specify the name of the group under the group line then give it all the permissions.
+Then create the group
+sudo groupadd devops
+Then add the usser to the group 
+sudo usermod -a -G devops danny
+
+Then check if your saved file doesnt have any error
+sudo visudo -c
+
+How to control how the root user can connect to the remote server
+sudo vi /etc/ssh/sshd_config
+
+search for permitrootlogin we can search using 
+/permit before we edit. 
+
+We remove the comment which is the # then specify
+without-password, which means the root can't login without a key.
+To test it we use sudo sshd -t
+
+Video 31
+securely upload and transfer files remotely sftp
+
+Video 32
+Process Managemnet
+ps command is used to check the processes running
+kill command is used to kill a process
+
+ps -l this gives more information
+ps -f this gives more detailed info, like user
+ps -lf we can use the two together.
+ps -u this shows the processes on all the terminals
+
+a demon is like a process but it runs in the background
+ps -e is used to show demons runinng in the backgroud
+
+ps -ef is used to show demons runinng in the background but with more info
+ps -x is showing processes and demons too but eith less columns
+
+Video 33
+Process Management
+Whats the process between a process, daemon and service
+A process is the command that gets run when the shell sends the program to the operating system to interpret the binary.
+The daemon is when that process gets sent to the background and runs without taking control of the shell.
+The service is the daemon but we have more control over it.
+
+example is systemctl status sshd
