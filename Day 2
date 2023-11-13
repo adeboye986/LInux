@@ -55,7 +55,7 @@ The command ls -la shows more info about the files and hidden files as well.
 
 rmdir is used to remove a directory in a directory
 
-rm -r command is used to remove a whole directory
+rm -rf command is used to remove a whole directory
 
 rm command is used to remove a file
 
@@ -69,7 +69,8 @@ echo
 
 Video 12
 
-echo 
+name=Daniel
+echo $name
 
 Variable
 
@@ -77,9 +78,14 @@ Video 13
 
 Directory tree structure in linux
 Another flag 
+
+tree / -L 1 (_L, this is the level and 1 is the lowest level)
+
 mkdir -p to create multiple folders at a time
 
 sudo command is used to install a software sudo apt-get install tree
+
+tree first_folder/
 
 -L flag is used to signify level
 
@@ -89,16 +95,16 @@ cntrl R brings up the last commands you wrote just type few letters
 
 All the binary files are stored in usr/bin
 
-Few other commands are stored in the usr/bin Eg, ls bin or ls usr/bin
+Few other commands are stored in the usr/bin Eg, ls bin or ls /usr/bin
 
 Video 14
 Linux directories
 
-Boot stores data related to booting up system
+Boot stores data related to booting up system ( tree /boot -L 1)
 
 CD-rom , we have the mount point
 
--dev is the location of device files, a device file is an interface to a device driver
+-dev is the location of device files, a device file is an interface to a device driver (tree /dev -L 1).
 
 etc is where configuration files are kept.
 
@@ -119,7 +125,7 @@ opt this is optional or option, it means adding custom functions, this would be 
 
 proc this is known as process, the processess the system starts
 
-grep commqnd is used to filter and find something
+grep command is used to filter and find something
 
 root
 
@@ -128,15 +134,15 @@ The run directory
 This is the mountpoint for tempfs filesystem in the computers memory. Temporary data used by processes are kept there. 
 
 df command disk free
-df -h a mofre readable format
+df -h a more readable format
 
 free command this is used to check the ram memory
 
-free -h
+free -h for a more readable format.
 
 ls /run/*.pid making an exception
 
-id command gives information aboutr a logged in user
+id command gives information about a logged in user
 
 Video 17
 
@@ -151,6 +157,8 @@ tmp this is where tmp files and directories are kept on disk
 
 usr this is where programs and libraries are been stored 
 
-var this is part ofthe sub directories within the root directory of the linux os which the system uses to write data during the course of its operation
+var this is part of the sub directories within the root directory of the linux os which the system uses to write data during the course of its operation
 it stores data that gets changed in the course of the operation of the OS
+
+ls -ltr /var/spool
 
