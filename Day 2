@@ -20,12 +20,14 @@ Then we also used the command head which shows us the first part of the file.
 
 
 Video 9
+We use the command which to know where the file system of a command is stored. eg ; which ls
+
 We used the command which ( It locates a command)
 
 Letter q on the keyboard takes you out of a command
 
 How to know which command does?
-We can use the command info with a command. Eg, info which
+We can use the command info with a command to know what a command does. Eg, info which
 
 The command man which is manual does similar thing to info
 
