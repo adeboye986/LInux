@@ -22,6 +22,8 @@ inode they store metadata about a file
 File tables are file names and inode number
 stat command code shows details about a file.
 
+You can use !s to run the last command that involves s
+
 chmod 777 command which means change modification is used to change permissions, who has access to a file
 
 ln command is used to link 2 files together
@@ -36,12 +38,13 @@ File descriptors are needed to track every file on the system, and it points to 
 
 Redirection is redirecting a code inside a file and not to display on the screen. Eg, echo hello >somefile
 cat somefile, this displays hello.
-Let's say we want to add another sentence into the somefile we use echo I am learning devops >>somefile
+Let's say we want to add another sentence into the somefile amd we dont want the previous file deleted we use 
+echo I am learning devops >>somefile
 
 File descriptors are
  standard input and these are data that you input into the system from your keyboard it is represented by 0 stdin
 
-standard out which is the number 1 is the data stream that prints onto the screen stdout
+standard out which is the number 1, is the data stream that prints onto the screen stdout
 
 standard error which is the number 2 stderr
 they are represented by numbers
@@ -51,7 +54,8 @@ find / -name daniel.io > stdout.txt
 less stdout.txt
 
 find / -name daniel.io 2> errors.txt
-What we did here is a redirection which is we are using the standard error 2 to redirect errors into stdout.txt
+What we did here is a redirection which is we are using the standard error 2 to redirect errors 
+into stdout.txt so we don't output it on the screen.
 
 vim error.txt &
 We are about to read the process of the vim
@@ -60,11 +64,11 @@ ps which means process status ps -ef | grep 4677
 I passed the process of 4677 using a | grep to filter out unwanted information
 
 Then to check the libraries the process vim is using we use the command lsof
-lsof | grep 4677
+lsof | grep 4677(the process code)
 
 Video 21
 User groups and permissions
-sudo super user do
+sudo means super user do
 su command is used to switch user Eg, sudo su
 su peter
 exit to exit the user and another exit
@@ -72,13 +76,16 @@ exit to exit the user and another exit
 to add a user to a group we use the command groupadd, Eg,
 sudo groupadd jundev - This is to create the group
 sudo grep jundev /etc/group - This is to check the group
-sudo usermod -a -G jundev peter - This is to add the user and modify it to the group
+sudo usermod -a -G jundev peter - This is to add the user and modify it to the group (The capital G flag is appending a user to a group)
 userdel is to delete user
 
 -rwxrwxrwx - This represents a file, this is also the permissions
 drwxrwxr - This represents a directory
 
 Video 22
+Create a file touch permissions_demo
+See the whole folder ls -l
+
 chmod - Change mode
 chmod u+x or w or r permissions_demo - This is to add permissions for users
 chmod u-x or w or r permissions_demo - This is to remove permissions for users
@@ -98,5 +105,5 @@ Read + Execute - 5
 Write + Execute - 3
 
 So instead of writing permissions 1 by 1 you can combine them.
-
+chmod 
  
