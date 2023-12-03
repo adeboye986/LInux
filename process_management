@@ -107,6 +107,7 @@ ps -e is used to show demons runinng in the backgroud
 
 ps -ef is used to show demons runinng in the background but with more info
 ps -x is showing processes and demons too but eith less columns
+ps -aux | grep firefox
 
 Video 33
 Process Management
