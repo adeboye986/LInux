@@ -117,3 +117,23 @@ The daemon is when that process gets sent to the background and runs without tak
 The service is the daemon but we have more control over it.
 
 example is systemctl status sshd
+The PPID is the parent ID which is always number 1.
+
+Video 34
+Process Management
+fg - foreground
+bg - background
+nohup
+jobs
+process states
+process signals
+You can open up firefox in the terminal by just typing firefox, but it takes over your terminal. 
+You havee to use control z to pause it, which means it takes firefox to the background so you can have control of your terminal.
+Type jobs to see your jobs
+To get your process ID and to kill it, you use, 
+ps -ef | grep firefox
+Then kill (PID) of the process.
+To open a process in the background, we use the;
+nohup firefox &
+To bring the process back to the forground, we use the command, 
+fg %3
